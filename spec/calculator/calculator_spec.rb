@@ -23,11 +23,9 @@ describe Calculator, "Sobre a calculadora" do
     it 'with positive numbers' do
       result = calc.div(6, 2)
       expect(result).to eq(3)
-    end
-    
-    it 'with 0' do
-      result = calc.div(10, 0)
-      expect(result).to eq("Error")
+    end    
+    it 'divide by 0' do
+      expect{ calc.div(10, 0) }.to raise_error(ZeroDivisionError)
     end
   end
 end

@@ -5,7 +5,6 @@ class Calculator
   end
 
   def div(a, b)
-    return "Error" if b == 0
     a / b
   end
 end
