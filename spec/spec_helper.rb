@@ -2,6 +2,22 @@ require_relative '../helpers/helper'
 
 RSpec.configure do |config|
 
+  config.before(:suite) do
+    puts '>>>>> Antes de TODA a suite de testes <<<<<'
+  end
+
+  config.after(:suite) do
+    puts '>>>>> Depois de TODA a suite de testes <<<<<'
+  end
+
+  config.before(:context) do
+    puts '>>>>> Antes de TODOS os testes <<<<<'
+  end
+
+  config.after(:all) do
+    puts '>>>>> Depois de TODOS os testes <<<<<'
+  end
+
   config.include Helper
   
   config.expect_with :rspec do |expectations|
